@@ -7,10 +7,19 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
+    class myLib
+    {
+        public string GetToken(string str, int n, char ch)  //str: " 1 2 3 " "1, 2, 3", (n)번째, ',' ' '
+        {
+            return str.Split(ch)[n];
+        }
+    }
     internal class Program
     {
         static void Main(string[] args)
         {
+            myLib my = new myLib();
+            
                 object obj;
                 int i = 10, j = 20;
                 double d = 1.5, e = 3.1;
@@ -24,7 +33,7 @@ namespace ConsoleApp1
                     
                    
                     string str = ReadLine();
-                    i = int.Parse(str.Split(' ')[0]);
+                    i = int.Parse(my.GetToken(str,0,' ');
                     j = int.Parse(str.Split(' ')[1]);
 
                     WriteLine($"HELLO WORLD ({i}, {j})\nMain function({obj}, {e})");
