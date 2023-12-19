@@ -56,7 +56,7 @@ namespace ConsoleApp1
             double distance = p2.Dist1(p2, p1);
             WriteLine("두 점 p1, p2의 거리는 {0}",distance);
             WriteLine("두 점 p1, p2의 거리는 {0}", p2-p1);
-            WriteLine("두 점 p1, p2의 사각형의 넓이는 {0}", p2 * p1);
+            WriteLine("두 점 p1, p2의 사각형의 넓이는 {0}", Math.Abs(p2 * p1));
 
         }
         public static void Main(string[] args)
