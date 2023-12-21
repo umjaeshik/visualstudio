@@ -29,9 +29,19 @@ namespace form_editor
             
             int p = main.textBox1.Text.IndexOf(str);
             main.textBox1.Select(p, str.Length);
-            main.ShowDialog();
+            
            
         }
-        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            string str;
+            string str1;
+
+            str = textBox_find.Text;
+            str1 = textBox_replace.Text;
+            main.textBox1.Text = main.textBox1.Text.Replace(str, str1);
+
+        }
     }
 }

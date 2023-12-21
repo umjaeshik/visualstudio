@@ -32,7 +32,7 @@
             this.textBox_find = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox_replace = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -73,22 +73,22 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "바꿀문자열";
             // 
-            // textBox1
+            // textBox_replace
             // 
-            this.textBox1.Location = new System.Drawing.Point(149, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(227, 21);
-            this.textBox1.TabIndex = 1;
+            this.textBox_replace.Location = new System.Drawing.Point(149, 79);
+            this.textBox_replace.Name = "textBox_replace";
+            this.textBox_replace.Size = new System.Drawing.Size(227, 21);
+            this.textBox_replace.TabIndex = 1;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(395, 79);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(109, 23);
-            this.button2.TabIndex = 2;
+            this.button2.TabIndex = 3;
             this.button2.Text = "바꾸기";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button1_Click);
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
@@ -97,7 +97,7 @@
             this.ClientSize = new System.Drawing.Size(553, 145);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_replace);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox_find);
             this.Controls.Add(this.label1);
@@ -114,7 +114,7 @@
         public System.Windows.Forms.TextBox textBox_find;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label2;
-        public System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.TextBox textBox_replace;
         private System.Windows.Forms.Button button2;
     }
 }
