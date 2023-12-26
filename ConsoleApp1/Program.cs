@@ -49,20 +49,56 @@ namespace ConsoleApp1
 
     internal class Program
     {
-        public void Func1()
-        {
-            Point p1 = new Point(10, 20);
-            Point p2 = new Point(30, 40);
-            double distance = p2.Dist1(p2, p1);
-            WriteLine("두 점 p1, p2의 거리는 {0}",distance);
-            WriteLine("두 점 p1, p2의 거리는 {0}", p2-p1);
-            WriteLine("두 점 p1, p2의 사각형의 넓이는 {0}", Math.Abs(p2 * p1));
+       
 
-        }
+
+            public void Func1()
+            {
+                Point p1 = new Point(10, 20);
+                Point p2 = new Point(30, 40);
+                double distance = p2.Dist1(p2, p1);
+                WriteLine("두 점 p1, p2의 거리는 {0}", distance);
+                WriteLine("두 점 p1, p2의 거리는 {0}", p2 - p1);
+                WriteLine("두 점 p1, p2의 사각형의 넓이는 {0}", Math.Abs(p2 * p1));
+
+            }
+            public void FuncArrayTest()
+            {
+                int[] arr = new int[10];
+                int[] arr1 = { 0, 1, 2, 3, 4 };
+
+                Point[] parr = new Point[10];
+                int[,] brr = { { 10, 11, 12, 13, 14 }, { 20, 21, 22, 23, 24 } };
+                int[][] crr =
+                {
+                    new int[] {10,11,12,13,14},
+                    new int[] {20,21,22,23,24 }
+                };
+                
+                for(int i=0; i<2; i++)
+                {
+                    for(int j=0; j<5; j++)
+                    {
+                        Write($"brr[{i},{j}] : {brr[i,j]}");
+
+                    }
+                }
+
+                for (int i = 0; i < 2; i++)
+                {
+                    for (int j = 0; j < 5; j++)
+                    {
+                        Write($"crr[{i},{j}] : {crr[i][j]}");
+
+                    }
+                }
+            }
+       
         public static void Main(string[] args)
         {
             Program a = new Program();
-            a.Func1();
+            //            a.Func1();
+            a.FuncArrayTest(); return;
             
         }
     }
